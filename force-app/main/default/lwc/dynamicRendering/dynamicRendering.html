@@ -1,0 +1,10 @@
+<template>
+    <lightning-button label="Filter Accounts" onclick={handleFilter}></lightning-button>
+    <template if:true={filterAllAccounts}>
+        <ul>
+            <template for:each={filterAllAccounts} for:item="account">
+                <li key={account.Id}>{account.Name} - {account.Industry}</li>
+            </template>
+        </ul>
+    </template>
+</template>
